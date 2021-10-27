@@ -1,38 +1,92 @@
 .header {
 
   nav {
-    padding: 24px;
+    padding: 1.0625rem 1.5rem; //17px 24px
   }
 
   &__logo {
     img {
-
+      width: 8.8125rem;
+      height: 1.375rem;
     }
   }
+  
+  // Mobile Menu
+  &__menu { 
 
-  &__menu {
-
-    > span{
+    > span {
       display: block;
       width: 26px;
       height: 2px;
       background-color: $darkBlue;
+      transition: all 300ms ease-in-out;
+      transform-origin: 3px 1px;
 
       &:not(:last-child) { //adds margin-bottom to all the spans except the last one
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open {
+
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
       }
     }
   }
 
   &__links {
+
     a {
       font-size: $font-sm;
+      position: relative;
       color: $grayishBlue;
+      transition: color 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      //This is that little bar that pops up on hover
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 5px;
+        bottom: -30px;      
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      
+
+      &:hover {
+        color: $darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
+      }
     }
   }
 
   &__cta {
     font-size: $font-sm;
     color: $white;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 }

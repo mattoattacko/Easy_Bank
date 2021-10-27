@@ -33,21 +33,18 @@
         <img src='images/logo.svg' alt='Easybank'>
       </a>
 
-      <a href='#' class='header__menu'>
+      <a id='btnHamburger' href='#' class='header__menu hide-for-desktop'>
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <div class="header__links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
+      <div class="header__links hide-for-mobile">
+        <!-- formatted in this weird way because of the whitespace thats added when pressing the enter key. No idea why VS Code is like this. -->
+        <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Blog</a><a href="#">Careers</a>
       </div>
 
-      <a href='#' class='button header__cta'>Request Invite</a>
+      <a href='#' class='button header__cta hide-for-mobile'>Request Invite</a>
     </nav>
   </header>
   <!-- 
