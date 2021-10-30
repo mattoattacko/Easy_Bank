@@ -15,9 +15,8 @@
     > span:last-child {
       transform: rotate(-45deg);
     }
+    }
   }
-
-}
 
   .overlay {
     opacity: 0;
@@ -30,7 +29,8 @@
   }
 
   nav {
-    padding: 1.0625rem 1.5rem; //17px 24px
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 
   &__logo {
@@ -58,8 +58,14 @@
   }
 
   &__menu {
+    position: absolute;
+    width: calc(100% - 3rem); // since the position is absolute, we are left aligning the object and then moving back right with the transform. 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5rem;
     background: $white;
     padding: 1.625rem; // 26px/16px = 1.625rem
+    border-radius: 5px;
 
     a {
       display: block;
