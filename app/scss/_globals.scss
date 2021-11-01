@@ -11,14 +11,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Public Sans', sans-serif;
-  font-size: $font-md; 
+  font-size: $font-sm; 
   font-weight: 300;
   color: $grayishBlue;
   line-height: 1.3;
 
+  @include breakpoint-up(large) {
+    font-size: $font-lg;
+  }
+
   &.noscroll {
     overflow: hidden;
   }
+}
+
+h1, h2, h3 {
+  margin-top: 0px;
 }
 
 a, a:visited, a:hover {
@@ -28,8 +36,39 @@ a, a:visited, a:hover {
 
 // Spacing
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto; //this will center the container
+ 
+  &--pall {
+    padding-top: 2.25rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.25rem;
+    padding-left: 1.5rem;
+  }
+
+  &--py {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  &--px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  &--pt {
+    padding-top: 2.25rem;
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 2.25rem;
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+
 }
 
 // Flexbox
@@ -52,13 +91,20 @@ a, a:visited, a:hover {
 
 // Buttons
 button, .button {
-  padding: 1rem 1.875rem; // 16px 30px
+  display: inline-block;
+  padding: 0.875rem 2.1875rem; 
   background: linear-gradient(to right, $limeGreen, $brightCyan);
   border-radius: 50px;
   border: 0;
   cursor: pointer;
   color: $white;
   font-weight: 400;
+  font-size: $font-sm;
+  transition: opacity 300ms ease-in-out;
+  
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 
