@@ -1,12 +1,12 @@
 .hero {
   background-color: $veryLightGray;
 
-  @include breakpoint-up(large){
-    
-    display: flex;
-    align-items: center;
-    
+  .container {
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;}
   }
+
 
   &__image {
       position: relative;

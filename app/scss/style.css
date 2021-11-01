@@ -315,7 +315,7 @@ button:hover, .button:hover {
 }
 
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
