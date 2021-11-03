@@ -1,0 +1,36 @@
+.feature {
+
+  &__grid {
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap; //because we want to have the same number of items in each row.
+    }
+
+  }
+
+  &__item {
+
+    padding: 0.9375rem; // 15px/16px = 0.9375rem
+
+    @include breakpoint-up(medium) {
+      flex: 0 0 50%; // flex-grow flex-shrink flex-basis
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1; //flex:1 will fit the available width. Puts all items on the same row with the same width. 
+    }
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+
+  }
+}
