@@ -60,6 +60,10 @@
     line-height: 1.2rem;
     color: $darkBlue;
     margin-bottom: 0.5rem;
+
+    &:hover {
+      color: $limeGreen;
+    }
   }
 
   &__description {
